@@ -1,4 +1,4 @@
-import { Container, Row, Col, Image } from "react-bootstrap";
+import { Container, Carousel, Row, Col, Image } from "react-bootstrap";
 import React, { Component } from "react";
 
 class MyMovie1 extends Component {
@@ -53,22 +53,35 @@ class MyMovie1 extends Component {
     }
 
     return (
-      <Container
-        id="mymovie"
-        fluid
-        style={{ backgroundColor: "#221f1f" }}
-        className="mt-2"
-      >
+      <Container fluid style={{ backgroundColor: "black" }} className="mt-3">
         <h4 className="mt-4 text-start text-light">
           Harry Potter - Collection
         </h4>
-        <Row>
-          {movies.slice(0, 10).map((dish) => (
-            <Col key={dish.imdbID} className="mb-2">
-              <Image id="cardImg" src={dish.Poster} />
-            </Col>
-          ))}
-        </Row>
+        <Carousel
+          interval={10000}
+          slide={true}
+          indicators={false}
+          controls={true}
+        >
+          <Carousel.Item>
+            <Row>
+              {movies.slice(0, 5).map((dish) => (
+                <Col key={dish.imdbID}>
+                  <Image id="cardImg" src={dish.Poster} />
+                </Col>
+              ))}
+            </Row>
+          </Carousel.Item>
+          <Carousel.Item>
+            <Row>
+              {movies.slice(5, 10).map((dish) => (
+                <Col key={dish.imdbID}>
+                  <Image id="cardImg" src={dish.Poster} />
+                </Col>
+              ))}
+            </Row>
+          </Carousel.Item>
+        </Carousel>
       </Container>
     );
   }
