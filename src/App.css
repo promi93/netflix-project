@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+/* MY CSS */
+#mynav {
+  background-color: black !important;
+}
+
+body {
+  background-color: black !important;
+}
+
+#mymovie {
+  background-color: black !important;
+}
+
+#cardImg:hover {
+  box-shadow: -1px -1px 15px 4px rgba(245, 245, 245, 0.467);
+  transition: 1s ease;
+  cursor: pointer;
+}
