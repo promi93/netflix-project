@@ -52,11 +52,13 @@ body {
 
 #cardImg {
   width: 200px;
-  height: auto;
+  height: 300px;
 }
 
 #cardImg:hover {
-  box-shadow: -1px -1px 15px 4px rgba(245, 245, 245, 0.467);
-  transition: 1s ease;
+  width: 220px;
+  height: 320px;
+  transition: 0.8s ease-in-out;
   cursor: pointer;
+  z-index: 1000;
 }

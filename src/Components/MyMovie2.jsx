@@ -12,7 +12,7 @@ class MyMovie2 extends Component {
   fetch = async () => {
     try {
       const response = await fetch(
-        "http://www.omdbapi.com/?i=tt3896198&apikey=93afaead&s=scream"
+        "https://www.omdbapi.com/?i=tt3896198&apikey=93afaead&s=scream"
       );
       if (response.ok) {
         const data = await response.json();
@@ -64,22 +64,22 @@ class MyMovie2 extends Component {
           controls={true}
         >
           <Carousel.Item>
-            <Row>
-              {movies.slice(0, 5).map((dish) => (
-                <Col key={dish.imdbID}>
+            <div className="d-flex flex-row">
+              {movies.slice(0, 10).map((dish) => (
+                <div key={dish.imdbID}>
                   <Image id="cardImg" src={dish.Poster} />
-                </Col>
+                </div>
               ))}
-            </Row>
+            </div>
           </Carousel.Item>
           <Carousel.Item>
-            <Row>
-              {movies.slice(5, 10).map((dish) => (
-                <Col key={dish.imdbID}>
+            <div className="d-flex flex-row">
+              {movies.slice(0).map((dish) => (
+                <div key={dish.imdbID}>
                   <Image id="cardImg" src={dish.Poster} />
-                </Col>
+                </div>
               ))}
-            </Row>
+            </div>
           </Carousel.Item>
         </Carousel>
       </Container>
