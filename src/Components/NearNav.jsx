@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Dropdown } from "react-bootstrap";
-
+import { BsGrid, BsJustifyLeft } from "react-icons/bs";
 const TVShowsHeader = () => {
   return (
     <Container fluid>
@@ -26,8 +26,12 @@ const TVShowsHeader = () => {
         </Col>
         <Col xs={3} className="d-flex justify-content-end">
           <div className="d-flex">
-            <div className="px-2 border border-secondary text-secondary"></div>
-            <div className="px-2 border border-secondary text-secondary"></div>
+            <div className="px-2 border border-secondary text-secondary">
+              <BsJustifyLeft />
+            </div>
+            <div className="px-2 border border-secondary text-secondary">
+              <BsGrid />
+            </div>
           </div>
         </Col>
       </Row>
