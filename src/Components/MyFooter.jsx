@@ -8,14 +8,14 @@ function MyFooter() {
         <Col xs={8} className="offset-2">
           <div
             style={{ fontSize: "30px", marginBottom: "20px" }}
-            className="col"
+            className="col d-flex"
           >
-            <FaFacebook className="text-light mx-4" />
-            <FaInstagram className="text-light mx-4" />
-            <FaTwitter className="text-light mx-4" />
-            <FaYoutube className="text-light mx-4" />
+            <FaFacebook className="text-secondary mx-4" />
+            <FaInstagram className="text-secondary mx-4" />
+            <FaTwitter className="text-secondary mx-4" />
+            <FaYoutube className="text-secondary mx-4" />
           </div>
-          <Row style={{ fontSize: "15px" }}>
+          <Row style={{ fontSize: "15px", textAlign: "left" }}>
             <Col xs={6} lg={3}>
               <p>Audio and Subtitles</p>
               <p>Media Center</p>
@@ -38,7 +38,10 @@ function MyFooter() {
               <p>Corporate Information</p>
             </Col>
           </Row>
-          <div className="helper">
+          <div
+            className="helper"
+            style={{ border: "1px solid gray", margin: "auto 45%" }}
+          >
             <p>Services</p>
           </div>
           <Row className="text-left my-3 ml-2">

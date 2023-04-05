@@ -1,4 +1,4 @@
-import { Container, Carousel, Row, Col, Image } from "react-bootstrap";
+import { Container, Carousel, Image } from "react-bootstrap";
 import React, { Component } from "react";
 
 class MyMovie1 extends Component {
@@ -55,11 +55,9 @@ class MyMovie1 extends Component {
 
     return (
       <Container fluid style={{ backgroundColor: "black" }} className="mt-3">
-        <h4 className="mt-4 text-start text-light">
-          Harry Potter - Collection
-        </h4>
+        <h4 className="mt-4 text-start text-light">Movie 1 - Collection</h4>
         <Carousel
-          interval={10000}
+          interval={15000}
           slide={true}
           indicators={false}
           controls={true}
