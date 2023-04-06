@@ -1,8 +1,9 @@
-import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import { Navbar, Nav, NavDropdown, Col, Container, Row } from "react-bootstrap";
 import { BiSearch, BiBell, BiUser } from "react-icons/bi";
 import netflixLogo from "../assets/img/netflix_logo.png";
 import avatar from "../assets/img/avatar.png";
 import kidsIcon from "../assets/img/kids_icon.png";
+import NearNav from "./NearNav";
 
 function MyNav() {
   return (
@@ -85,6 +86,7 @@ function MyNav() {
           </div>
         </Navbar.Collapse>
       </Navbar>
+      <NearNav />
     </div>
   );
 }

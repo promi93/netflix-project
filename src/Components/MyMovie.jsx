@@ -57,7 +57,7 @@ class MyMovie1 extends Component {
 
     return (
       <Container fluid style={{ backgroundColor: "black" }} className="mt-3">
-        <h4 className="mt-4 text-start text-light">Movie 1 - Collection</h4>
+        <h4 className="mt-4 text-start text-light">{this.props.title}</h4>
         <Carousel
           interval={15000}
           slide={true}
