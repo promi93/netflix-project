@@ -1,4 +1,4 @@
-import { Navbar, Nav, NavDropdown, Col, Container, Row } from "react-bootstrap";
+import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import { BiSearch, BiBell, BiUser } from "react-icons/bi";
 import netflixLogo from "../assets/img/netflix_logo.png";
 import avatar from "../assets/img/avatar.png";
