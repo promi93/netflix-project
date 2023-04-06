@@ -2,9 +2,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import MyNav from "./Components/MyNav";
 import MyFooter from "./Components/MyFooter";
-import MyMovie1 from "./Components/MyMovie1";
-import MyMovie2 from "./Components/MyMovie2";
-import MyMovie3 from "./Components/MyMovie3";
+import MyMovie from "./Components/MyMovie";
 import NearNav from "./Components/NearNav";
 
 function App() {
@@ -16,9 +14,9 @@ function App() {
       </header>
 
       <main>
-        <MyMovie1 />
-        <MyMovie2 />
-        <MyMovie3 />
+        <MyMovie movie="harry%20potter" />
+        <MyMovie movie="star%20wars" />
+        <MyMovie movie="lord%20of%20the%20rings" />
       </main>
 
       <footer>

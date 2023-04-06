@@ -1,7 +1,7 @@
 import { Container, Carousel, Image } from "react-bootstrap";
 import React, { Component } from "react";
 
-class MyMovie2 extends Component {
+class MyMovie1 extends Component {
   state = {
     movies: [],
     load: true,
@@ -10,10 +10,13 @@ class MyMovie2 extends Component {
   };
 
   fetch = async () => {
+    const movie = this.props.movie;
+
     try {
       const response = await fetch(
-        "https://www.omdbapi.com/?i=tt3896198&apikey=93afaead&s=scream"
+        `https://www.omdbapi.com/?i=tt3896198&apikey=93afaead&s=${movie}`
       );
+
       if (response.ok) {
         const data = await response.json();
 
@@ -54,7 +57,7 @@ class MyMovie2 extends Component {
 
     return (
       <Container fluid style={{ backgroundColor: "black" }} className="mt-3">
-        <h4 className="mt-4 text-start text-light">Movie 2 - Collection</h4>
+        <h4 className="mt-4 text-start text-light">Movie 1 - Collection</h4>
         <Carousel
           interval={15000}
           slide={true}
@@ -63,20 +66,22 @@ class MyMovie2 extends Component {
         >
           <Carousel.Item>
             <div className="d-flex flex-row">
-              {movies.slice(0, 10).map((dish) => (
-                <div key={dish.imdbID}>
-                  <Image id="cardImg" src={dish.Poster} />
-                </div>
-              ))}
+              {movies &&
+                movies.slice(0, 20).map((dish) => (
+                  <div key={dish.imdbID}>
+                    <Image id="cardImg" src={dish.Poster} />
+                  </div>
+                ))}
             </div>
           </Carousel.Item>
           <Carousel.Item>
             <div className="d-flex flex-row">
-              {movies.slice(0).map((dish) => (
-                <div key={dish.imdbID}>
-                  <Image id="cardImg" src={dish.Poster} />
-                </div>
-              ))}
+              {movies &&
+                movies.slice(0).map((dish) => (
+                  <div key={dish.imdbID}>
+                    <Image id="cardImg" src={dish.Poster} />
+                  </div>
+                ))}
             </div>
           </Carousel.Item>
         </Carousel>
@@ -85,4 +90,4 @@ class MyMovie2 extends Component {
   }
 }
 
-export default MyMovie2;
+export default MyMovie1;
